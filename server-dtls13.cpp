@@ -48,7 +48,7 @@ int           listenfd = INVALID_SOCKET;   /* Initialize our socket */
 static void sig_handler(const int sig);
 static void free_resources(void);
 
-static int my_verify_callback(int result, WOLFSSL_X509_STORE_CTX*) {
+static int my_verify_callback(int result, WOLFSSL_X509_STORE_CTX* ctx_store) {
     printf("my_verify_callback failed\n");
     return result;
 }
